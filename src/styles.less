@@ -1,0 +1,152 @@
+/* You can add global styles to this file, and also import other style files */
+.lds-dual-ring {
+    position:absolute;
+    width: 64px;
+    height: 64px;
+    left:45%;
+    top:20%;
+    margin:auto;
+  }
+  .lds-dual-ring:after {
+    content: " ";
+    display: block;
+    width: 100px;
+    height: 100px;
+    margin: 1px;
+    border-radius: 50%;
+    border: 7px solid salmon;
+    border-color: rgba(0,0,0,0.4) transparent rgba(0,0,0,0.4) transparent;
+    animation: lds-dual-ring 1.2s linear infinite;
+  }
+  @keyframes lds-dual-ring {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+  html{
+      margin:0px !important;
+      padding:0px !important;
+  }
+
+
+
+.breadcrumbs{
+  display:inline-block;
+    margin:80px 20px 0px 0px !important;
+    text-transform: capitalize;
+}
+
+.bread-crumb-link{
+    cursor: pointer;
+}
+
+pre {
+  background-color:rgba(0,0,0,0.1);
+  color:black;
+  padding:10px;
+  border-radius:4px;
+  overflow-x: scroll;
+}
+
+h1, h2, h3, h4 {
+  font-weight: 300 !important;
+  display:inline-block;
+}
+
+.card-panel {
+  position: relative;
+}
+
+.badge {
+  position: absolute;
+  background-color: #888;
+  color:white;
+  border-radius:5px;
+  display:block;
+  bottom:10px;
+  right:10px;
+  padding:5px 20px;
+  cursor: pointer;
+}
+
+.jumbotron {
+  background-color: #666;
+  height:300px;
+  position:relative;
+  overflow-x:hidden;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  h1 {
+      width:100%;
+      display:inline-block;
+      line-height: normal;
+      font-size: 50px;
+      text-align: center;
+      color: #F5F5F5;
+      margin-top:120px;
+  }
+}
+
+.big-triangle:before {
+  right: 50%;
+  border-right: 1000px solid transparent;
+  border-left: 1000px solid;
+}
+
+.big-triangle:after {
+  left: 50%;
+  border-left: 1000px solid transparent;
+  border-right: 1000px solid;
+}
+
+.big-triangle:after, .big-triangle:before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  width: 50%;
+  z-index: 100;
+/*  change the hieght and the color below */
+  border-bottom: 160px solid #888;
+  -moz-transform: rotate(0.000001deg);
+  -webkit-transform: rotate(0.000001deg);
+  -o-transform: rotate(0.000001deg);
+  -ms-transform: rotate(0.000001deg);
+  transform: rotate(0.000001deg);
+}
+
+@keyframes move {
+  from { top: -500px; }
+  to { top:0; }
+}
+
+.svg-container{
+  position: relative;
+  width:100%;
+  margin-bottom:30px;
+  
+  svg {
+      position:absolute;
+      display:block;
+      z-index:-1;
+      margin:auto;
+      left:0;
+      right:0;
+      border:none;
+      animation:move 0.5s;
+  }
+}
+
+.jumbotron-content {
+    h2, h3, h5, h6 {
+      text-align:center !important;
+      width: 100%;
+      color:#fff;
+  }
+}

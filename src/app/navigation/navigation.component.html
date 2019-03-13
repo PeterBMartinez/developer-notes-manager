@@ -1,0 +1,10 @@
+<nav>
+  <div class="nav-wrapper">
+    <ul id="nav-mobile" class="right">
+      <li><a routerLink="/">Home</a></li>
+      <li><a routerLink="categories">Developer Notes</a></li>
+      <li *ngIf="currentRole === 'Admin'"><a routerLink="new-note">New Note</a></li>
+      <li><a routerLink="contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>

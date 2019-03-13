@@ -8,7 +8,11 @@
       "sourceRoot": "src",
       "projectType": "application",
       "prefix": "app",
-      "schematics": {},
+      "schematics": {
+        "@schematics/angular:component": {
+          "styleext": "less"
+        }
+      },
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
@@ -23,9 +27,17 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.less",
+              "node_modules/materialize-css/dist/css/materialize.min.css",
+              "./node_modules/froala-editor/css/froala_editor.pkgd.min.css",
+              "./node_modules/froala-editor/css/froala_style.min.css",
+              "./node_modules/font-awesome/css/font-awesome.css"
             ],
-            "scripts": [],
+            "scripts": [
+              "node_modules/materialize-css/dist/js/materialize.min.js",
+              "./node_modules/jquery/dist/jquery.min.js",
+              "./node_modules/froala-editor/js/froala_editor.pkgd.min.js"
+            ],
             "es5BrowserSupport": true
           },
           "configurations": {
@@ -82,7 +94,11 @@
             "styles": [
               "src/styles.css"
             ],
-            "scripts": [],
+            "scripts": [
+              "node_modules/materialize-css/dist/js/materialize.min.js",
+              "./node_modules/jquery/dist/jquery.min.js",
+              "./node_modules/froala-editor/js/froala_editor.pkgd.min.js"
+            ],
             "assets": [
               "src/favicon.ico",
               "src/assets"

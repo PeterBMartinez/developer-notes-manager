@@ -1,0 +1,57 @@
+
+.jumbotron-content {
+    margin-top:50px;
+}
+
+.icon-container {
+    width: 100%;
+    position: relative;
+    height:10px;
+}
+
+.toggle {
+    position: absolute;
+    right:0;
+    top:-50px;
+}
+
+.edit {
+    &:extend(.toggle);
+    color:green;
+}
+.cancel{
+    &:extend(.toggle);
+    color:salmon;
+}
+.svg-container{
+    position: relative;
+    width:100%;
+    margin-bottom:30px;
+    
+    svg {
+        position:absolute;
+        display:block;
+        z-index:-1;
+        margin:auto;
+        left:0;
+        right:0;
+        border:none;
+        animation:move 0.5s;
+    }
+
+}
+
+.note-container {
+    display:inline-block;
+    width: 100%;
+}
+
+.go-back{
+    cursor: pointer;
+    margin:20px 0px;
+    padding:10px;
+    color:#fff;
+    background-color:#888;
+    text-align: center;
+    width:100px;
+}

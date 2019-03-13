@@ -1,0 +1,33 @@
+<div class="jumbotron big-triangle">
+  <div class="jumbotron-content">
+      <h1>Login</h1>
+  </div>
+</div>
+<div class="svg-container">
+  <svg fill="#888" id="bigTriangleColor" xmlns="http://www.w3.org/2000/svg" width="400px" height="50" viewBox="0 0 100 100" preserveAspectRatio="none">
+    <path d="M0 0 L50 100 L100 0 Z" />
+  </svg>
+</div>
+<div class="container">
+  <div class="login-container">
+    <div class="row">
+      <div class="col l4 offset-l4">
+        <form (ngSubmit)="onLogin()" [formGroup]="loginForm">
+            <div class="input-field">
+              <input id="email" type="text" class="validate" formControlName="email" />
+              <label for="email">Email</label>
+              <span *ngIf="submitted && loginForm.controls.email.invalid" class="helper-text">Email Required</span>
+            </div>
+            <div class="input-field">
+              <input id="password" type="password" class="validate" formControlName="password" />
+              <label for="password">Password</label>
+              <span *ngIf="submitted && loginForm.controls.password.invalid" class="helper-text">Password Required</span>
+            </div>
+            <button class="btn waves-effect waves-light" type="submit" name="action">Submit
+                <i class="material-icons right">send</i>
+            </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,63 @@
+<div class="jumbotron big-triangle">
+  <div class="jumbotron-content">
+    <h1>Full Stack Development</h1>
+  </div>
+</div>
+<div class="svg-img-container">
+  <div class="animation-container">
+      <svg fill="#888" id="bigTriangleColor" xmlns="http://www.w3.org/2000/svg" width="400px" height="200" viewBox="0 0 100 100" preserveAspectRatio="none">
+        <path d="M0 0 L50 100 L100 0 Z" />
+      </svg>
+      <img class="circle responsive-img" width="150px" src="https://scontent-sjc3-1.xx.fbcdn.net/v/t1.0-9/45788051_1912489832393643_8197286822078840832_n.jpg?_nc_cat=104&_nc_ht=scontent-sjc3-1.xx&oh=3f95ba33974abf695367c6e7283cc049&oe=5CDA3ED1"/>
+      <div class="divider"></div>
+  </div>
+</div>
+<div class="container">
+  <div class="row">
+    <div class="col l4">
+      <div class="left-home">
+          <h3>Peter Martinez</h3>
+    
+            <p>Something about looking at a blank webpage always stirs up the creativity in me.
+            
+            The idea that I could make anything I want and knowing that there are no limits, brings absolute joy to my heart.</p>
+            
+            <p>I have always been passionate about development and design. I put the maximum amount of effort in every project.</p>
+      </div>
+    </div>
+    <div class="col l4 offset-l4">
+     <div class="right-home">
+        <h3>Skill Set</h3>
+        <ul>
+          <li>HTML5</li>
+          <li>CSS3</li>
+          <li>Typescript</li>
+          <li>JavaScript</li>
+          <li>Angular</li>
+          <li>Angularjs</li>
+          <li>React / Redux</li>
+          <li>Vuejs / Vuex</li>
+          <li>ASP MVC 5</li>
+          <li>MongoDB</li>
+          <li>Node / Express</li>
+        </ul>
+     </div>
+    </div>
+  </div>
+<div class="developer-notes-container">
+  <h4>Recent Developer Notes</h4>
+  <div class="row">
+    <div class="col l4" *ngFor="let note of recentNotes">
+        <div class="card-panel">
+            <div>
+              <h5 class="title">{{note.note.title}}</h5>
+              <div class="badge" routerLink="categories">{{note.category}}</div>
+              <p>{{note.note.description}}</p>
+              <a routerLink="categories/{{note.category}}/{{note._id}}">Read More</a>
+              <i *ngIf="currentRole === 'Admin'" (click)="deleteNote(note._id)" class="material-icons trash">delete</i>
+            </div>
+          </div>
+    </div>
+  </div>
+</div>
+</div>

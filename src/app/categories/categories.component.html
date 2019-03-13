@@ -1,0 +1,41 @@
+<div class="jumbotron big-triangle">
+    <div class="jumbotron-content">
+        <h1>Developer Notes</h1>
+    </div>
+  </div>
+<div class="svg-container">
+    <svg fill="#888" id="bigTriangleColor" xmlns="http://www.w3.org/2000/svg" width="400px" height="50" viewBox="0 0 100 100" preserveAspectRatio="none">
+      <path d="M0 0 L50 100 L100 0 Z" />
+    </svg>
+</div>
+<div class="container">
+  <div class="notes-container">
+    <form action="" [formGroup]="searchForm">
+        <div class="row">
+            <div class="input-field col s6">
+              <input id="first_name2" type="text" class="validate" formControlName="term">
+              <label class="active" for="first_name2">Search for Notes</label>
+            </div>
+          </div>
+      </form>
+  </div>
+  <div class="row">
+    <div class="col l3">
+      <h5>Categories</h5>
+        <div class="collection" *ngFor="let category of categories">
+            <a class="collection-item" (click)="getNotesByCategory(category)">{{ category }}</a>
+          </div>
+    </div>
+    <div class="col l9">
+        <div class="card-panel" *ngFor="let note of notes">
+            <div>
+                <h5 class="title">{{note.note.title}}</h5>
+                <div class="badge">{{note.category}}</div>
+                <p>{{note.note.description}}</p>
+                <a routerLink="{{note.category}}/{{note._id}}">Read More</a>
+                <i *ngIf="currentRole === 'Admin'" (click)="deleteNote(note._id)" class="material-icons trash">delete</i>
+            </div>
+          </div>
+    </div>
+</div>
+</div>
