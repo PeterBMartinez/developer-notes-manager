@@ -21,7 +21,6 @@ export class RestService {
   }
 
   getRequest(params) {
-    console.log(`${this.API_URL}${params}`);
     const request = this.http.get(
       `${this.API_URL}${params}`,
       this.getHeaderOptions("application/json")
@@ -39,7 +38,6 @@ export class RestService {
   }
 
   deleteRequest(params) {
-    console.log(this.TOKEN);
     const request = this.http.delete(
       `${this.API_URL}${params}`,
       this.getHeaderOptions("application/json")
@@ -48,7 +46,6 @@ export class RestService {
   }
 
   postRequest(params, obj) {
-    console.log(params, obj);
     const request = this.http.post(
       `${this.API_URL}${params}`,
       obj,

@@ -17,7 +17,6 @@ export class NotesService {
 
   getNotesByCategory(filterCategory?: string) {
     const category = this.params.getParams().category || filterCategory;
-    console.log("Notes Service", category);
     const request = this.rest.getRequest(`/notes/category/${category}`);
     return request;
   }
@@ -29,7 +28,6 @@ export class NotesService {
 
   getNote() {
     const { category, note_id } = this.params.getParams();
-    console.log(category, note_id);
     const request = this.rest.getRequest(`/notes/note/${category}/${note_id}`);
     return request;
   }

@@ -15,7 +15,6 @@ export class HomeComponent implements OnInit {
   ngOnInit() {
     this.notesService.searchNotes("?limit=3").subscribe(notes => {
       this.recentNotes = notes;
-      console.log(notes);
     });
   }
 }

@@ -27,7 +27,6 @@ export class UserService {
   login(credentials) {
     const request = this.rest.postRequest("/users/login", credentials);
     request.subscribe((userObject: IUser) => {
-      console.log(userObject.user.token);
       window.localStorage.setItem("token", userObject.user.token);
       this.setCurrentRole(userObject.user.role);
     });

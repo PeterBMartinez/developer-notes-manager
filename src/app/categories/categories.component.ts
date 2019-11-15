@@ -46,7 +46,6 @@ export class CategoriesComponent implements OnInit {
   }
 
   getNotesByCategory(category) {
-    console.log(category);
     this.notesService.searchNotes(`?category=${category}`).subscribe(notes => {
       this.notes = notes;
     });

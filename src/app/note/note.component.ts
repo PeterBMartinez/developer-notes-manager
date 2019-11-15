@@ -49,7 +49,6 @@ export class NoteComponent implements OnInit {
   }
 
   goToRoute(url, category) {
-    console.log(category);
     const categoryUrl = `/${url}`;
     this.router.navigateByUrl(
       category ? categoryUrl + `/${category}` : categoryUrl
@@ -61,7 +60,6 @@ export class NoteComponent implements OnInit {
   }
 
   updateNote() {
-    console.log(this.noteForm.value);
     const { category, title, description, body } = this.noteForm.value;
     const note = {
       category,
