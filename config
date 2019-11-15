@@ -1,0 +1,10 @@
+# Personal account, - the default config
+Host github.com
+   HostName github.com-PeterAlianza
+   User git
+   IdentityFile ~/.ssh/id_rsa
+# Work account-1
+Host github.com-Crowmeleon  
+   HostName github.com
+   User git
+   IdentityFile ~/.ssh/etc

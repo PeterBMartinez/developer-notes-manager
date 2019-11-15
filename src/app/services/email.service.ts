@@ -1,15 +1,14 @@
-import { Injectable } from '@angular/core';
-import { RestService } from './rest.service';
+import { Injectable } from "@angular/core";
+import { RestService } from "./rest.service";
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: "root"
 })
 export class EmailService {
+  constructor(private rest: RestService) {}
 
-  constructor(private rest: RestService) { }
-
-  sendEmail (emailObj) {
-    const request = this.rest.postRequest('/email/send', emailObj);
+  sendEmail(emailObj) {
+    const request = this.rest.postRequest("/email/send", emailObj);
     return request;
   }
 }

@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import { Injectable } from "@angular/core";
 
 export interface RecentStateParams {
   category?: string;
@@ -6,23 +6,22 @@ export interface RecentStateParams {
 }
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: "root"
 })
-
 export class RecentParamsService {
-  private state: RecentStateParams = {}
+  private state: RecentStateParams = {};
 
-  constructor() { }
+  constructor() {}
 
   setState(overrides) {
-    this.state = Object.assign({}, this.state, overrides)
+    this.state = Object.assign({}, this.state, overrides);
   }
 
   getParams() {
-    return this.state
+    return this.state;
   }
 
   clearState() {
-    this.state = {}
+    this.state = {};
   }
 }
