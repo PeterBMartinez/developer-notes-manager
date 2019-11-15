@@ -8,7 +8,6 @@ export class RestService {
   constructor(private http: HttpClient) {}
 
   API_URL = "https://developer-notes-api.herokuapp.com/api";
-  // API_URL: String = 'http://localhost:5500/api';
   TOKEN: string = window.localStorage.getItem("token");
 
   getHeaderOptions(type): object {
